@@ -2,7 +2,9 @@
 
 namespace App\Nova;
 
+use App\Nova\Actions\ExportAsVCF;
 use Illuminate\Http\Request;
+use Laravel\Nova\Actions\ExportAsCsv;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
@@ -112,6 +114,8 @@ class Employee extends Resource
      */
     public function actions(NovaRequest $request)
     {
-        return [];
+        return [
+            ExportAsVCF::make(),
+        ];
     }
 }
