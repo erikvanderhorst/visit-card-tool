@@ -20,12 +20,12 @@ class Employee extends Model
         'image',
     ];
 
-    public function post(): BelongsTo
+    public function Company(): BelongsTo
     {
         return $this->belongsTo(Company::class);
     }
 
-    public function socialMediaChannels(): MorphMany
+    public function socialMediaChannel(): MorphMany
     {
         return $this->morphMany(SocialMediaChannel::class, 'morphable');
     }

@@ -24,7 +24,7 @@ class Company extends Model
     {
         return $this->hasMany(Employee::class);
     }
-    public function socialMediaChannels()
+    public function socialMediaChannel()
     {
         return $this->morphMany(SocialMediaChannel::class, 'morphable');
     }
